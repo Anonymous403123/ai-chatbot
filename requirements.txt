@@ -1,0 +1,21 @@
+# Core dependencies
+streamlit>=1.28.0
+requests>=2.31.0
+
+# Machine Learning & Data Processing
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# Utilities
+python-dotenv>=1.0.0
+
+# Optional but recommended for better performance
+pillow>=10.0.0
+plotly>=5.17.0
+
+# For testing (optional)
+pytest>=7.4.0
+
+# For API development (if needed)
+flask>=2.3.0
+flask-cors>=4.0.0
