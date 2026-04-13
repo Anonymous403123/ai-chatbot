@@ -32,4 +32,3 @@ It combines rule-based responses with AI-generated replies.
 - Handling unknown inputs
 
 ## 🎥 Demo
-(Add video or link here)
