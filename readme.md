@@ -66,3 +66,5 @@ pip install -r requirements.txt
 
 # 4. Run the application
 streamlit run app.py
+or
+python streamlit run app.py
