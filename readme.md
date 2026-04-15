@@ -1,70 +1,101 @@
-# 🤖 AI Chatbot
+# 🤖 AI Chatbot with Web Interface
 
-> A smart conversational AI chatbot built with Python and Streamlit that combines rule-based responses with generative AI capabilities.
+A simple yet powerful AI chatbot built using **Streamlit** and powered by the **OpenRouter API**. This project provides an interactive web-based chat interface with customizable model settings and chat history management.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
-[![OpenRouter](https://img.shields.io/badge/OpenRouter-API-orange?style=for-the-badge)](https://openrouter.ai)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
+---
 
-## 📌 Overview
+## 🚀 Features
 
-This is a **simple yet powerful chatbot** that demonstrates two approaches to conversational AI:
-- **Rule-based responses** for common interactions
-- **AI-powered generation** for dynamic conversations
+- 💬 Interactive chat interface
+- ⚙️ Adjustable model and temperature settings
+- 🧠 Supports multiple free AI models via OpenRouter
+- 🗑️ Clear chat & 💾 export chat history
+- ⏱️ Timestamped messages
+- 🔌 Fallback echo bot (no API required)
 
-The chatbot features a clean, modern web interface built with Streamlit and can run both with and without an API key.
+---
 
-## ✨ Features
+## 🛠️ Setup & Run Locally
 
-| Feature | Description |
-|---------|-------------|
-| 🎯 **Dual Mode** | Rule-based + AI-powered responses |
-| 💬 **Chat History** | Maintains conversation context |
-| 🎨 **Modern UI** | Clean, responsive Streamlit interface |
-| 🔄 **Clear Chat** | One-click conversation reset |
-| ⚡ **Fast Response** | Optimized for quick replies |
-| 🆓 **Free Tier** | Works with OpenRouter free models |
-
-## 🛠️ Tech Stack
-
-<details>
-<summary>Click to expand</summary>
-
-| Technology | Purpose |
-|------------|---------|
-| **Python 3.8+** | Core programming language |
-| **Streamlit** | Web interface framework |
-| **OpenRouter API** | AI model provider (free tier) |
-| **Requests** | API communication |
-| **Session State** | Chat history management |
-
-</details>
-
-## 📦 Installation
-
-### Prerequisites
-
-- Python 3.8 or higher
-- pip package manager
-- (Optional) OpenRouter API key
-
-### Step-by-Step Guide
-
+### 1. Clone the Repository
 ```bash
-# 1. Clone the repository
-git clone https://github.com/Anonymous403123/ai-chatbot.git
-cd ai-chatbot
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
 
-# 2. Create a virtual environment (recommended)
+### 2. Create Virtual Environment (Recommended)
+```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate   # On Linux/Mac
+venv\Scripts\activate      # On Windows
+```
 
-# 3. Install dependencies
-pip install -r requirements.txt
+### 3. Install Dependencies
+```bash
+pip install streamlit requests
+```
 
-# 4. Run the application
+### 4. Add Your API Key
+- Get your API key from: https://openrouter.ai/keys  
+- Open the Python file and replace:
+```python
+API_KEY = "YOUR_OPENROUTER_API_KEY"
+```
+
+### 5. Run the App
+```bash
 streamlit run app.py
-or
-python streamlit run app.py
+```
+
+### 6. Open in Browser
+```
+http://localhost:8501
+```
+
+---
+
+## 🧠 Approach
+
+This chatbot is built using an API-based approach:
+
+- Uses the OpenRouter API to access multiple AI models
+- No fine-tuning or RAG — purely live API inference
+- Maintains conversation context using session state
+- Includes a fallback rule-based echo bot for offline testing
+
+### ✨ What Makes It Unique?
+
+- 🔄 Auto model routing (uses best available free model)
+- 🎛️ Real-time temperature control for creativity
+- 💡 Beginner-friendly with no heavy ML setup required
+
+---
+
+## ⚠️ Challenges & Solutions
+
+### 1. API Errors & Timeouts
+**Challenge:** Handling API failures and delays  
+**Solution:** Added error handling for timeouts, connection issues, and API errors
+
+### 2. Managing Chat State
+**Challenge:** Maintaining conversation history  
+**Solution:** Used Streamlit session_state to persist messages
+
+### 3. Testing Without API Key
+**Challenge:** App breaks without API key  
+**Solution:** Implemented an echo bot fallback for testing
+
+---
+
+## 📌 Future Improvements
+
+- Add memory (long-term conversation storage)
+- Integrate RAG for knowledge-based responses
+- Improve UI/UX with themes and animations
+- Deploy on cloud (Streamlit Cloud / AWS)
+
+---
+
+## 📄 License
+
+This project is open-source and free to use.
